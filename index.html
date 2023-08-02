@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/bbba137e40.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="header">
+        <navbar>
+            <h1> DWARAKANATH <pre> .M</pre></h1> 
+            <ul id="sidemenu">
+                
+                <li> <a href="#header"> Home </a></li>
+                <li> <a href="#section"> About </a></li>
+                <li> <a href="#Projects"> Projects </a></li>
+                <li> <a href="#contact"> Contact </a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </navbar>
+        <div class="header-text">
+            
+            <h1> Hi, I'm <span> MADANAMBETI </span><br> DWARAKANATH and I am a passionate</h1> <span id="element"></span>
+            
+        </div>
+        </div>
+    </header>
+    <!-- -------------about------------ -->
+    <section>
+        <div id="section">
+        <div class="section1">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="1690975993653.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub1"> About Me</h1>
+                    <p> To work in learning and challenging environment, utilizing my skill and knowledge to be the best of my abilities and contribute positively to my personal growth as well as growth of the organization. Looking for challenging and intellectual career which involves constant
+                        learning and updating of skills and challenges both in technical and
+                        personal grounds with sheer determination.</p>
+                    <h3> Languages Known are Telugu, Hindi, English</h3>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li> <span> B.Tech (Aeronautical Engineering)</span> <br> <p>2019-2023 <br> Bharath University </p> </li>
+                            <li> <span> Intermediate</span> <br> <p> 2017-2019<br> Sri Chaitanya Jr College </p> </li>
+                            <li> <span> SSC</span> <br> <p> 2017<br> C.S Theja High School </p> </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="education" >
+                        <ul>
+                            <li> <span> Frontend Development</span> <br> <p>HTML/CSS/JavaScript </p></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>    
+        </div>
+        </div>
+    </section>
+
+       <!-- ---------projects-------------- -->
+
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub1" id="project"> My Projects</h1>
+            <div class="services-list">
+                <div class="project p1">
+                    <img src="project1.png">
+                    <div class="layer">
+                        <p> <h4> Amazon Clone </h4> <br>I have created responsive front page of amazon clone using only HTML and CSS</p>
+                        <a href="https://dwarakaasd.github.io/Amazon-Clone-frontpage/" target="-main"> <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div> 
+                    
+                </div>
+                <div class="project p2">
+                    <img src="project2.png">
+                    <div class="layer">
+                        <p> <h4> Mini Calculator</h4> <br> I have designed a Responsive website for simple mini calculator using HTML, CSS and JavaScript</p>
+                        <a href="https://dwarakaasd.github.io/Mini-simple-claculator/" target="-main"> <i class="fa-solid fa-up-right-from-square"></i> </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------contact------------------ -->
+    <div id="contact">
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub1"> Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> dwarakanathmodaliar@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i> 8074824861</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/dwarakdwarakanath/" target="-main"> <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="DWARAKANATH RESUME.pdf" download class="btn btn2"> Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"> Submit</button>
+                    </form>
+                    <span id="span"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <!-- <p> Copyright <i class="fa-regular fa-copyright"></i> by dwarak</p> -->
+        <p> Thank you for visiting us</p>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+
+    }
+</script> 
+<script>
+    
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+        
+    }
+
+</script>   
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyg53nIO7rlUQ7NrOTuPsLgALWRmYxW0REcL3bsO0oMKyi16p_21Fjwm9h9YjygR0foJg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("span")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+<script>
+  var typed = new Typed('#element', {
+    strings: ['<h1> Frontend Developer. </h1>'],
+    typeSpeed: 50,
+  });
+</script>    
+</body>
+</html>
